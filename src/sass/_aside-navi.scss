@@ -1,0 +1,81 @@
+/* --aside-- */
+
+.aside {
+    display: none;
+
+    @media screen and (min-width: 1200px) {
+        display: block;
+        padding-top: 8.9rem;
+    }
+
+    &__inner {
+        height: 100vh;
+        left: 0;
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+
+    &__left, &__right {
+        align-items: center;
+        display: flex;
+        height: 100vh;
+        justify-content: center;
+        padding: 4rem;
+        width: calc(50% - 250px);
+        position: absolute;
+    }
+
+    &__left {
+        background: url(../images/aside_background-left.webp);
+        background-position: center;
+        background-size: cover;
+        left: 0;
+        top: 0;
+
+    }
+
+    &__images {
+        height: auto;
+        max-width: 35.4rem;
+    }
+
+    &__right {
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    &__navigation {
+        display: none;
+
+        @media screen and (min-width: 500px) {
+            display: block;
+        }
+    }
+
+    &__navigationMenuItem {
+        text-align: center;
+
+        @media screen and (min-width: 500px) {
+            & a {
+                display: block;
+                margin-bottom: 2rem;
+                padding: 0;
+                color: $ciBrown;
+                font-size: 2rem; 
+                text-decoration: none;
+
+                &:before {
+                    background: url("../images/c_kirakira-green.webp");
+                    content: "";
+                    background-size: 100% auto;
+                    display: block;
+                    margin: 0 auto .5rem;
+                    height: 1.8rem;
+                    width: 1.8rem;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,82 @@
+/* --flow-- */
+
+.flow {
+    &__sectionHeader {
+        margin-bottom: 6rem;
+    }
+
+    &__item {
+        border-left: 1px solid #ccc;
+        margin-bottom: 3rem;
+        margin-left: .6rem;
+        position: relative;
+
+        &:first-of-type .c-descriptionText,
+        &:nth-last-of-type(2) .c-descriptionText,
+        &:last-of-type .c-descriptionText {
+            margin-bottom: .8rem;
+        }
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+
+        &:after {
+            background: $white;
+            content:"";
+            display: block;
+            height: 2rem;
+            left: -0.7rem;
+            position: absolute;
+            top: 0;
+            width: 1.2rem;
+            z-index: 1;
+        }
+
+        &:before {
+            background: url(../images/c_kirakira-green.webp);
+            background-size: 100% auto;
+            content:"";
+            display: block;
+            height: 1.2rem;
+            left: -0.7rem;
+            position: absolute;
+            top: 0;
+            width: 1.2rem;
+            z-index: 2;
+        }
+    }
+
+    &__itemInner {
+        margin-left: auto;
+        max-width: 31rem;
+    }
+
+    &__itemImage {
+        box-shadow: 5px 5px 0px 0px $ciGreen;
+        margin-bottom: 1rem;
+
+        img {
+            vertical-align: bottom;
+        }
+    }
+
+    &__itemStepNumber {
+        height: auto;
+        width: 5.3rem;
+    }
+
+    &__itemHeader {
+        color: $ciBrown;
+        font-weight: bold;
+        font-size: 1.6rem;
+        line-height: 1.4;
+        margin-bottom: .8rem;
+    }
+
+    &__itemNote {
+        color: $textGray;
+        font-size: 1.2rem;
+        line-height: 1.5;
+    }
+}

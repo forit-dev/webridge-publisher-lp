@@ -1,0 +1,45 @@
+/* --footer-- */
+
+.footer {
+    position: relative;
+
+    &__inner {
+        padding: 4.8rem 2rem;
+    }
+
+    &__logo {
+        margin-bottom: 2.5rem;
+        text-align: center;
+
+        img {
+            height: 4.8rem;
+            width: auto;
+        }
+    }
+
+    &__menu {
+        display: flex;
+        gap: 2.4rem;
+        justify-content: center;
+        margin-bottom: 2rem;
+    }
+
+    &__menuItem {
+        & a {
+            color: #153496;
+            font-size: 1.2rem;
+            line-height: 1.5;
+            padding-block: .5rem;
+            text-decoration: none;
+        }
+    }
+
+    &__copyright {
+        color: $textBlack;
+        display: block;
+        font-size: 1rem;
+        line-height: 1.5;
+        margin-bottom: 1.6rem;
+        text-align: center;
+    }
+}

@@ -1,0 +1,51 @@
+/* --header-- */
+
+.header {
+    background: $white;
+    border-bottom: 1px solid #ccc;
+    max-width: 500px;
+    position: fixed;
+    z-index: 10000;
+    width: 100vw;
+
+    @media screen and (min-width: 1200px) {
+        border-bottom: 0;
+    }
+
+    &__inner {
+        align-items: center;
+		display: flex;
+        margin: 0 auto;
+		justify-content: space-between;
+        padding: 1.2rem 2rem;
+
+        @media screen and (min-width: 1200px) {
+            padding: 2rem;
+            position: static;
+        }
+    }
+
+    &__logo {
+        padding-inline: .7rem;
+
+        & img {
+            height: auto;
+            width: 12.1rem;
+        }
+
+        @media screen and (min-width: 1200px) {
+            left: auto;
+            position:static;
+            transform: translateX(0%);
+        }
+    }
+
+    &__button {
+        font-size: 1.2rem;
+        max-width: 7.2rem;
+
+        @media screen and (min-width: 1200px) {
+            display: none;
+        }
+    }
+}

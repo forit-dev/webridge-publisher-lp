@@ -1,0 +1,121 @@
+/* --voice-- */
+
+.voice {
+    &__header {
+        height: auto;
+        margin: 0 auto 2rem;
+        width: 22.5rem;
+    }
+
+    &__description {
+        margin-bottom: 4rem;
+        text-align: center;
+    }
+
+    &__card {
+        margin-bottom: 5rem;
+        position: relative;
+
+        &:after {
+            background: linear-gradient(180deg, #4BCCBE 26.5%, rgba(255, 255, 255, 0.00) 100%);
+            border-radius: 4.5rem 4.5rem 0 0;
+            content: "";
+            display: block;
+            height: 32rem;
+            left: 0;
+            position: absolute;
+            top: -1.3rem;
+            max-width: 30.9rem;
+            width: 100%;
+            z-index: 1;
+        }
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+
+    &__cardMain {
+        background: $white;
+        border: .1rem solid #ccc;
+        border-radius: 3rem;
+        margin-left: auto;
+        margin-bottom: 1rem;
+        padding: 2.5rem 1.5rem;
+        position: relative;
+        max-width: 32.3rem;
+        z-index: 2;
+    }
+
+    &__cardMainHeader {
+        color: $ciBrown;
+        font-size: 1.8rem;
+        font-weight: bold;
+        line-height: 1.4;
+        margin-bottom: 2rem;
+    }
+
+    &__cardMainImage {
+        margin-bottom: 2rem;
+    }
+
+    &__cardMainName {
+        color: $ciBrown;
+        font-size: 1.4rem;
+        font-weight: bold;
+        margin-bottom: 3rem;
+    }
+
+    &__cardMainNote {
+        color: $textGray;
+        font-size: 1rem;
+        line-height: 1.5;
+        margin-left: auto;
+        text-align: right;
+        max-width: 32.3rem;
+    }
+
+    &__cardNote {
+        color: $textGray;
+        font-size: 1.2rem;
+        line-height: 1.5;
+        text-align: center;
+    }
+
+    &__descriptionTextWrap {
+        margin: 20px auto;
+        font-family: Arial, sans-serif;
+    }
+    
+    &__descriptionText {
+        display: -webkit-box;
+        margin-bottom: 3rem;
+        overflow: hidden;
+        -webkit-line-clamp: 4; /* 4行目の文末から省略する */
+        -webkit-box-orient: vertical;
+        white-space: normal;
+        text-overflow: ellipsis;
+    }
+    
+    &__descriptionText.expanded {
+        -webkit-line-clamp: unset; /* 省略を解除 */
+    }
+
+    &__readMoreText {
+        color: $ciGreen;
+        cursor: pointer;
+        font-size: 1.4rem;
+        line-height: 1.5;
+        text-align: center;
+
+        &:after {
+            background: url(../images/c_arrow-down.webp);
+            background-size: 100% auto;
+            content: "";
+            display: block;
+            height: .6rem;
+            margin: .7rem auto 0;
+            width: 1rem;
+        }
+    }
+}

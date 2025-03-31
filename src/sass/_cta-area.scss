@@ -1,0 +1,49 @@
+/* --ctaArea-- */
+
+.ctaArea {
+    &__header {
+        margin-bottom: 2.4rem;
+    }
+
+    &__buttonMicrocopy {
+        margin-bottom: .5rem;
+
+        img {
+            height: 2.2rem;
+        }
+    }
+    
+    &__bgColorPurple {
+        background: url(../images/cta-area_bg-color-purple.webp);
+        background-size: cover;
+    }
+    
+    &__bgColorGreen {
+        background: url(../images/cta-area_bg-color-green.webp);
+        background-size: cover;
+    }
+    
+    &__bgColorOrange {
+        background: url(../images/cta-area_bg-color-orange.webp);
+        background-size: cover;
+    }
+}
+
+.ctaArea--small {
+    background-size: cover;
+    padding: 3.2rem;
+
+    &__inner {
+        margin: 0 auto;
+    }
+
+    &__buttonShadow {
+        box-shadow: 0px 0px 5.4px 0px rgba(95, 92, 86, 0.56);
+    }
+}
+
+.ctaArea--large { 
+    background: url(../images/cta-area-large_bg.webp);
+    background-size: cover;
+    padding: 17.4rem 3.2rem  
+}
