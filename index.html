@@ -4,6 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Webridge Publisher LP</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- OGP設定 -->
+    <meta property="og:title" content="Webridge Publisher LP">
+    <meta property="og:description" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://lp.webridge.net/publisher/">
+    <meta property="og:image" content="https://lp.webridge.net/publisher/assets/images/publisher-lp-ogp.webp">
+    <meta property="og:site_name" content="Webridge Publisher LP">
+    <meta property="og:locale" content="ja_JP">
+
+    <!-- Twitterカード -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Webridge Publisher LP">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="https://lp.webridge.net/publisher/assets/images/publisher-lp-ogp.webp">
 </head>
 <body>
     <div class="c-contentWrap">
@@ -11,32 +27,26 @@
         <!-- header -->
         <header class="header">
             <div class="header__inner">
-                <nav id="globalNavigation" class="globalNavigation">
+                <div class="header__logo"> <!-- logo -->
+                    <a href="#">
+                        <img src="assets/images/webridge_logo.webp" alt="Webridge" width="" height="">
+                    </a>
+                </div>
+                <nav id="globalNavigation" class="globalNavigation"> <!-- navi -->
                     <input id="drawer__checkbox" type="checkbox">
                     <label id="drawer__icon" for="drawer__checkbox"><span></span></label>
                     <label id="drawer__close" for="drawer__checkbox"></label>
                     <div id="drawer__content">
                         <ul class="globalNavigation__menu">
-                            <li class="globalNavigation__menuItem"><a href="#reason">ブライダルエステとは</a></li>
-                            <li class="globalNavigation__menuItem"><a href="#feature">セレブリティハウス3つの特徴</a></li>
-                            <li class="globalNavigation__menuItem"><a href="#solution">花嫁が抱えたお悩みを解決</a></li>
-                            <li class="globalNavigation__menuItem"><a href="#plan">８つの体験プラン</a></li>
-                            <li class="globalNavigation__menuItem"><a href="#flow">予約から施術までの流れ</a></li>
-                            <li class="globalNavigation__menuItem"><a href="#voice">お客様の声</a></li>
+                            <li class="globalNavigation__menuItem"><a href="#works">多彩な案件</a></li>
+                            <li class="globalNavigation__menuItem"><a href="#reason">Webridgeが選ばれる理由</a></li>
+                            <li class="globalNavigation__menuItem"><a href="#influencers">活躍中のインフルエンサー</a></li>
+                            <li class="globalNavigation__menuItem"><a href="#steps">Webridgeをはじめる4ステップ</a></li>
+                            <li class="globalNavigation__menuItem"><a href="#applicationProcess">登録の流れ</a></li>
+                            <li class="globalNavigation__menuItem"><a href="#faq">よくある質問</a></li>
                         </ul>
                     </div>
                 </nav>     
-
-                <!-- logo -->
-                <div class="header__logo">
-                    <a href="#">
-                        <img src="assets/images/logo.webp" alt="Webridge" width="" height="">
-                    </a>
-                </div>
-                <!-- ctaButton -->
-                <a href="https://webridge.net/top/publisher/interim" class="header__button c-button c-bgColor__pink">
-                    今すぐ無料登録
-                </a>
             </div>
         </header>
 
@@ -45,7 +55,7 @@
             <div class="aside__inner">
                 <div class="aside__left">
                     <div class="aside__images">
-                        <img src="" alt="" width="354" height="894">
+                        <img src="" alt="" width="" height="">
                     </div>
                 </div>
                 <div class="aside__right">
@@ -55,7 +65,8 @@
                             <li class="aside__navigationMenuItem"><a href="#reason">Webridgeが選ばれる理由</a></li>
                             <li class="aside__navigationMenuItem"><a href="#influencers">活躍中のインフルエンサー</a></li>
                             <li class="aside__navigationMenuItem"><a href="#steps">Webridgeをはじめる4ステップ</a></li>
-                            <li class="aside__navigationMenuItem"><a href="#faq">案件の申し込みの流れ</a></li>
+                            <li class="globalNavigation__menuItem"><a href="#applicationProcess">登録の流れ</a></li>
+                            <li class="globalNavigation__menuItem"><a href="#faq">よくある質問</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -66,11 +77,15 @@
             <!-- firstView -->
             <div class="firstView">
                 <div class="firstView__inner">
-                    <h1 class="firstView__header c-fadein">
-                        <img src="assets/images/first-view_header.webp" alt="私が「好き」で稼ぐ方法" width="" height="">
-                    </h1>                    
-                    <div class="firstView__buttonWrap">
-                        <a href="https://webridge.net/top/publisher/interim" class="c-button c-bgColor__ciBrown c-content__maxWidth">今すぐ無料登録</a>
+                    <div class="firstView__innerTop">
+                        <h1 class="firstView__header c-fadein">
+                            <img src="assets/images/first-view_header.webp" alt="私が「好き」で稼ぐ方法" width="" height="">
+                        </h1>                    
+                        <div class="firstView__buttonWrap">
+                            <a href="https://webridge.net/top/publisher/interim" class="c-button c-bgColor__pink c-ctaArea__buttonShadow">
+                                <img src="assets/images/cta-area_btn-copy-white.webp" alt="今すぐ無料で登録" width="" height="" loading="lazy">
+                            </a>
+                        </div>
                     </div>
                     <div class="firstView__publisherImages">
                         <img src="assets/images/first-view_publisher-images.webp" alt="メイクをしている女性とスマホを持っている男性" width="" height="">
@@ -103,18 +118,23 @@
             </section>
 
             <!-- ctaArea -->
-            <div class="ctaArea--small ctaArea__bgColorPurple">
+            <div class="ctaArea ctaArea--small ctaArea__bgColorPurple">
                 <div class="c-content__maxWidth">
-                    <div class="ctaArea__buttonMicrocopy">
-                        <img src="assets/images/cta-area-button-microcopy.webp" alt="1分で登録完了" width="" height="" loading="lazy">
+                    <div class="ctaArea__header">
+                        <img src="assets/images/cta-area_header.webp" alt="好き×SNSで収益化" width="" height="" loading="lazy">
                     </div>
-                    <a href="https://webridge.net/top/publisher/interim" class="c-button c-bgColor__pink c-ctaArea__buttonShadow">今すぐ無料で登録</a>
+                    <div class="ctaArea__buttonMicrocopy">
+                        <img src="assets/images/cta-area_button-microcopy.webp" alt="1分で登録完了" width="" height="" loading="lazy">
+                    </div>
+                    <a href="https://webridge.net/top/publisher/interim" class="c-button c-bgColor__pink c-ctaArea__buttonShadow">
+                        <img src="assets/images/cta-area_btn-copy-white.webp" alt="今すぐ無料で登録" width="" height="" loading="lazy">
+                    </a>
                 </div>
             </div>
 
             <!-- reason -->
             <section id="reason" class="reason">
-                <div class="c-section__inner">
+                <div class="c-section__inner c-bgColor__beige">
                     <h2 class="reason__header">
                         <img src="assets/images/reason_section-header.webp" alt="Webridgeが選ばれる理由" width="" height="" loading="lazy">
                     </h2>
@@ -131,19 +151,24 @@
             </section>
 
             <!-- ctaArea -->
-            <div class="ctaArea--small ctaArea__bgColorGreen">
+            <div class="ctaArea ctaArea--small ctaArea__bgColorGreen">
                 <div class="c-content__maxWidth">
-                    <div class="ctaArea__buttonMicrocopy">
-                        <img src="assets/images/cta-area-button-microcopy.webp" alt="1分で登録完了" width="" height="" loading="lazy">
+                    <div class="ctaArea__header">
+                        <img src="assets/images/cta-area_header.webp" alt="好き×SNSで収益化" width="" height="" loading="lazy">
                     </div>
-                    <a href="https://webridge.net/top/publisher/interim" class="c-button c-bgColor__pink c-ctaArea__buttonShadow">今すぐ無料で登録</a>
+                    <div class="ctaArea__buttonMicrocopy">
+                        <img src="assets/images/cta-area_button-microcopy.webp" alt="1分で登録完了" width="" height="" loading="lazy">
+                    </div>
+                    <a href="https://webridge.net/top/publisher/interim" class="c-button c-bgColor__pink c-ctaArea__buttonShadow">
+                        <img src="assets/images/cta-area_btn-copy-white.webp" alt="今すぐ無料で登録" width="" height="" loading="lazy">
+                    </a>                
                 </div>
             </div>
 
             <!-- influencers -->
             <section id="influencers" class="influencers">
-                <div class="c-section__inner">
-                    <h2 class="works__header">
+                <div class="c-section__inner c-bgColor__beige">
+                    <h2 class="influencers__header">
                         <img src="assets/images/influencers_section-header.webp" alt="活躍中のインフルエンサー" width="" height="" loading="lazy">
                     </h2>
                     <div class="influencers__description">
@@ -195,83 +220,114 @@
             </section>
                 
             <!-- ctaArea -->
-            <div class="ctaArea--small ctaArea__bgColorOrange">
+            <div class="ctaArea ctaArea--small ctaArea__bgColorOrange">
                 <div class="c-content__maxWidth">
-                    <div class="ctaArea__buttonMicrocopy">
-                        <img src="assets/images/cta-area-button-microcopy.webp" alt="1分で登録完了" width="" height="" loading="lazy">
+                    <div class="ctaArea__header">
+                        <img src="assets/images/cta-area_header.webp" alt="好き×SNSで収益化" width="" height="" loading="lazy">
                     </div>
-                    <a href="https://webridge.net/top/publisher/interim" class="c-button c-bgColor__pink c-ctaArea__buttonShadow">今すぐ無料で登録</a>
+                    <div class="ctaArea__buttonMicrocopy">
+                        <img src="assets/images/cta-area_button-microcopy.webp" alt="1分で登録完了" width="" height="" loading="lazy">
+                    </div>
+                    <a href="https://webridge.net/top/publisher/interim" class="c-button c-bgColor__pink c-ctaArea__buttonShadow">
+                        <img src="assets/images/cta-area_btn-copy-white.webp" alt="今すぐ無料で登録" width="" height="" loading="lazy">
+                    </a>                
                 </div>
             </div>
 
             <!-- faq -->
             <section id="faq" class="faq">
-                <div class="c-section__inner">
+                <div class="c-section__inner c-bgColor__beige">
                     <h2 class="faq__header">
                         <img src="assets/images/faq_section-header.webp" alt="よくある質問" width="" height="" loading="lazy">
                     </h2>
                     <div class="faq__list">
                         <details class="faq__listItem">
-                            <summary>アフィリエイトとは何ですか？</summary>
-                            <p>SNSなどで紹介された商品やサービスのアフィリエイトリンクを経由し、実際に購入や利用が行われた場合、紹介者に報酬が発生する仕組みです。この仕組みは成果報酬型広告とも呼ばれます。Webridgeでは、アフィリエイト案件を提供しています。</p>
+                            <summary class="faq__listItemQuestion">
+                                <img src="assets/images/faq_list-item-question_affiliate.webp" alt="アフィリエイトとは何ですか？" width="" height="" loading="lazy">
+                            </summary>
+                            <p class="faq__listItemAnswer">
+                                <img src="assets/images/faq_list-item-answer_affiliate.webp" alt="SNSなどで紹介された商品やサービスのアフィリエイトリンクを経由し、実際に購入や利用が行われた場合、紹介者に報酬が発生する仕組みです。この仕組みは成果報酬型広告とも呼ばれます。Webridgeでは、アフィリエイト案件を提供しています。" width="" height="" loading="lazy">
+                            </p>
                         </details>
                     
                         <details class="faq__listItem">
-                            <summary>始めるのにお金はかからない？</summary>
-                            <p>入会金や年会費は不要。完全無料で利用できます。</p>
+                            <summary class="faq__listItemQuestion">
+                                <img src="assets/images/faq_list-item-question_initial-cost.webp" alt="始めるのにお金はかからない？" width="" height="" loading="lazy">
+                            </summary>
+                            <p class="faq__listItemAnswer">
+                                <img src="assets/images/faq_list-item-answer_initial-cost.webp" alt="入会金や年会費は不要。完全無料で利用できます。" width="" height="" loading="lazy">
+                            </p>
                         </details>
                     
                         <details class="faq__listItem">
-                            <summary>スマホ以外に必要なものは？</summary>
-                            <p>スマホ1台だけでOK。インスタなどのSNSアカウントがあればすぐに始められます。</p>
+                            <summary class="faq__listItemQuestion">
+                                <img src="assets/images/faq_list-item-question_what-you-need.webp" alt="スマホ以外に必要なものは？" width="" height="" loading="lazy">
+                            </summary>
+                            <p class="faq__listItemAnswer">
+                                <img src="assets/images/faq_list-item-answer_what-you-need.webp" alt="スマホ1台だけでOK。インスタなどのSNSアカウントがあればすぐに始められます。" width="" height="" loading="lazy">
+                            </p>
                         </details>
                     
                         <details class="faq__listItem">
-                            <summary>少ないフォロワー数で始められる？</summary>
-                            <p>フォロワー100人以上で登録可能です。少ないフォロワー数でも始められます。</p>
+                            <summary class="faq__listItemQuestion">
+                                <img src="assets/images/faq_list-item-question_follower.webp" alt="少ないフォロワー数で始められる？" width="" height="" loading="lazy">
+                            </summary>
+                            <p class="faq__listItemAnswer">
+                                <img src="assets/images/faq_list-item-answer_follower.webp" alt="フォロワー100人以上で登録可能です。少ないフォロワー数でも始められます。" width="" height="" loading="lazy">
+                            </p>
                         </details>
                     
                         <details class="faq__listItem">
-                            <summary>審査は厳しい？</summary>
-                            <p>Webridgeの一定基準に基づき、審査をさせていただきます。例えば、アダルトサイトやオンラインカジノなどをPRした投稿や、コンテンツの内容が著しく乏しい投稿は、登録をお断りする場合があります。</p>
+                            <summary class="faq__listItemQuestion">
+                                <img src="assets/images/faq_list-item-question_examination.webp" alt="審査は厳しい？" width="" height="" loading="lazy">
+                            </summary>
+                            <p class="faq__listItemAnswer">
+                                <img src="assets/images/faq_list-item-answer_examination.webp" alt="Webridgeの一定基準に基づき、審査をさせていただきます。例えば、アダルトサイトやオンラインカジノなどをPRした投稿や、コンテンツの内容が著しく乏しい投稿は、登録をお断りする場合があります。" width="" height="" loading="lazy">
+                            </p>
                         </details>
                     
                         <details class="faq__listItem">
-                            <summary>獲得した報酬はどこで確認できる？</summary>
-                            <p>メニューの「成果履歴」から、成果を簡単に確認できます。</p>
+                            <summary class="faq__listItemQuestion">
+                                <img src="assets/images/faq_list-item-question_reward-check.webp" alt="獲得した報酬はどこで確認できる？" width="" height="" loading="lazy">
+                            </summary>
+                            <p class="faq__listItemAnswer">
+                                <img src="assets/images/faq_list-item-answer_reward-check.webp" alt="メニューの「成果履歴」から、成果を簡単に確認できます。" width="" height="" loading="lazy">
+                            </p>
                         </details>
                     </div>
                 </div>
             </section>
 
             <!-- ctaArea -->
-            <div class="ctaArea--large">
+            <div class="ctaArea ctaArea--large">
                 <div class="c-content__maxWidth">
-                    <div>
-                        <img src="assets/images/logo.webp" alt="『好き』で稼ぐ第一歩をWebridgeで" width="" height="" loading="lazy">
+                    <div class="ctaArea__header">
+                        <img src="assets/images/cta-area-large_header.webp" alt="『好き』で稼ぐ第一歩をWebridgeで" width="" height="" loading="lazy">
                     </div>
                     <div class="ctaArea__buttonMicrocopy">
-                        <img src="assets/images/cta-area-button-microcopy.webp" alt="1分で登録完了" width="" height="" loading="lazy">
+                        <img src="assets/images/cta-area_button-microcopy.webp" alt="1分で登録完了" width="" height="" loading="lazy">
                     </div>
-                    <a href="https://webridge.net/top/publisher/interim" class="c-button c-bgColor__white">今すぐ無料で登録</a>
+                    <a href="https://webridge.net/top/publisher/interim" class="c-button c-bgColor__white">
+                        <img src="assets/images/cta-area_btn-copy-pink.webp" alt="今すぐ無料で登録" width="" height="" loading="lazy">
+                    </a>                
                 </div>
             </div>
         </main>
 
         <!-- footer -->
-        <footer class="footer c-bgColor__white">
+        <footer class="footer c-bgColor__beige">
             <div class="footer__inner">
                 <!-- ロゴ画像 -->
                 <div class="footer__logo">
                     <a href="#">
-                        <img src="assets/images/logo.webp" alt="Webridge" width="" height="" loading="lazy">
+                        <img src="assets/images/webridge_logo.webp" alt="Webridge" width="" height="" loading="lazy">
                     </a>
                 </div>
                 <ul class="footer__menu">
                     <li class="footer__menuItem"><a href="https://webridge.net/ja_jp/top/company">会社概要</a></li>
                     <li class="footer__menuItem"><a href="https://webridge.net/ja_jp/top/privacy">プライバシーポリシー</a></li>
                 </ul>
-                <small class="footer__copyright">&copy; © For it Inc.</small>
+                <small class="footer__copyright">&copy; For it Inc.</small>
             </div>
         </footer>
     </div>
