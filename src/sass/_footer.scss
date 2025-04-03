@@ -4,7 +4,8 @@
     position: relative;
 
     &__inner {
-        padding: 4.8rem 2rem;
+        padding: 2rem;
+        text-align: center;
     }
 
     &__logo {
@@ -26,20 +27,32 @@
 
     &__menuItem {
         & a {
+            align-items: center;
             color: #153496;
+            display: flex;
             font-size: 1.2rem;
             line-height: 1.5;
             padding-block: .5rem;
             text-decoration: none;
+
+            &::after {
+                background: url(../images/footer_menu-item-arrrow.webp);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: 100% auto;
+                content: "";
+                display: block;
+                height: 1.5rem;
+                margin-left: .5rem;
+                width: 1.5rem;
+            }
         }
     }
 
     &__copyright {
-        color: $textBlack;
-        display: block;
-        font-size: 1rem;
+        color: #707070;
+        font-size: 1.2rem;
         line-height: 1.5;
-        margin-bottom: 1.6rem;
-        text-align: center;
+        padding: .8rem;
     }
 }

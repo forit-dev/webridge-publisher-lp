@@ -1,7 +1,6 @@
 /* --global-navi-- */
 
 .globalNavigation {
-    background: $white;
     padding-inline: 1rem;
 
     &__menu {
@@ -16,6 +15,7 @@
 
     &__menuItem {
         &:last-of-type a {
+            border-bottom: 0;
             margin-bottom: 0;
         }
 
@@ -24,36 +24,10 @@
         }
 
         & a {
-            align-items: center;
-            color: $white;
+            border-bottom: 1px dashed $btnBgPink;
             display: flex;
             font-size: 1.4rem;
-            font-weight: bold;
-            line-height: 1.1;
-            margin-bottom: 1rem;
-            padding: 1.5rem 0;
-            text-decoration: none;
-
-            &:before {
-                background: url("../images/c_kirakira-white.webp");
-                background-size: 100% auto;
-                content: "";
-                display: block;
-                height: 1.5rem;
-                margin-right: 1rem;
-                width: 1.5rem;
-            }
-
-            &:after {
-                background: url("../images/c_arrow-right-white.webp");
-                background-repeat: no-repeat;
-                background-size: 100% auto;
-                content: "";
-                display: block;
-                height: 1.1rem;
-                margin-left: auto;
-                width: .6rem;
-            }
+            padding: 2rem 0;
         }
     }
 
@@ -139,7 +113,7 @@
 
     /*---アイコンを押してスライドして出るエリア---*/
     #drawer__content {
-        background: $ciBrown;
+        background: $bgBeige;
         background-size: 100% auto;
         height: 100%;
         letter-spacing: 0.03em;

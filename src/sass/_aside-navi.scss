@@ -3,12 +3,16 @@
 .aside {
     display: none;
 
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: 431px) {
         display: block;
-        padding-top: 8.9rem;
+    }
+
+    @media screen and (min-width: 1200px) {
+        padding-top: 6.6rem;
     }
 
     &__inner {
+        background: $bgBeige;
         height: 100vh;
         left: 0;
         position: fixed;
@@ -17,12 +21,11 @@
     }
 
     &__left, &__right {
-        align-items: center;
-        display: flex;
+        display: grid;
         height: 100vh;
-        justify-content: center;
         padding: 4rem;
-        width: calc(50% - 250px);
+        place-content: center;
+        width: calc(50% - 215px);
         position: absolute;
     }
 
@@ -31,50 +34,78 @@
         background-position: center;
         background-size: cover;
         left: 0;
+        place-items: center;
         top: 0;
-
     }
 
-    &__images {
-        height: auto;
-        max-width: 35.4rem;
+    &__leftLogo,
+    &__leftButton {
+        display: none;
+
+        @media screen and (min-width: 1200px) {
+            display: block;
+        }
+    }
+
+    &__leftLogo {
+        @media screen and (min-width: 1200px) {
+            height: auto;
+            margin-bottom: 5.5rem;
+            max-width: 32.4rem;
+        }
+    }
+
+    &__buttonMicrocopy {
+        margin-bottom: .5rem;
+        max-width: 41.3rem;
+    }
+
+    &__leftButton {
+        @media screen and (min-width: 1200px) {
+            max-width: 41.3rem;
+
+            & img {
+                height: 1.6rem;
+                width: auto;
+            }
+        }
     }
 
     &__right {
+        background: url(../images/aside_background-right.webp);
+        background-position: center;
+        background-size: cover;
         right: 0;
-        top: 50%;
-        transform: translateY(-50%);
+        top: 0;
     }
 
     &__navigation {
         display: none;
 
-        @media screen and (min-width: 500px) {
+        @media screen and (min-width: 1200px) {
             display: block;
+            max-width: 30.5rem;
         }
     }
 
     &__navigationMenuItem {
         text-align: center;
 
-        @media screen and (min-width: 500px) {
-            & a {
-                display: block;
-                margin-bottom: 2rem;
-                padding: 0;
-                color: $ciBrown;
-                font-size: 2rem; 
-                text-decoration: none;
+        &:last-of-type a {
+            border-bottom: 0;
+        }
 
-                &:before {
-                    background: url("../images/c_kirakira-green.webp");
-                    content: "";
-                    background-size: 100% auto;
-                    display: block;
-                    margin: 0 auto .5rem;
-                    height: 1.8rem;
-                    width: 1.8rem;
-                }
+        & a {
+            align-items: center;
+            border-bottom: 1px dashed $btnBgPink;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 1.2rem;
+            padding: 2rem 0;
+
+            & img {
+                height: 2.2rem;
+                width: auto;
             }
         }
     }

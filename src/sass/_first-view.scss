@@ -1,7 +1,6 @@
 /* --first view-- */
 
 .firstView {
-    /*  --共通スタイル-- */
     padding-top: 6.5rem;
 
     @media screen and (min-width: 1200px) {
@@ -9,92 +8,10 @@
     }
 
     &__buttonWrap {
-        position: relative;
-        z-index: 2;
+        padding-inline: 2rem;
     }
 
-    /*  --first view パターン1のスタイル-- */
     &__inner {
-        background-color: $white;
-        background: url(../images/first-view_background.webp);
-        position: relative;
-    }
-
-    &__massage {
-        height: auto;
-        margin-bottom: .5rem;
-        position: relative;
-        width: 24.5rem;
-        z-index: 2;
-    }
-
-    &__header {
-        height: auto;
-        margin-bottom: 6.8rem;
-        margin-left: 1.2rem;
-        position: relative;
-        max-width: 25.4rem;
-        z-index: 2;
-    }
-
-    &__bodyParts {
-        right: 1.3rem;
-        position: absolute;
-        top: 1.3rem;
-        max-width: 6.8rem;
-        z-index: 2;
-    }
-
-    &__price {
-        left: 5px;
-        margin-bottom: 1.2rem;
-        position: relative;
-        width: 171px;
-        z-index: 2;
-    }
-
-    &__bride {
-        bottom: 7.2rem;
-        height: auto;
-        position: absolute;
-        right: 0;
-        width: 29.2rem;
-        z-index: 1;
-    }
-
-    /*  --first view パターン2のスタイル-- */
-    &__inner2 {
-        padding: 1.2rem 2rem 2.6rem;
-        position: relative;
-    }
-
-    &__header2 {
-        height: auto;
-        margin: 0 auto -1.1rem;
-        position: relative;
-        max-width: 32.3rem;
-        z-index: 2;
-    }
-
-    &__bodyParts2 {
-        left: -3.6rem;
-        position: absolute;
-        max-width: 6.8rem;
-        z-index: 2;
-    }
-
-    &__brideAndPlans {
-        margin: 0 auto 1.4rem;
-        position: relative;
-        max-width: 28.9rem;
-    }
-
-    &__price2 {
-        margin: 0 auto 2.7rem;
-        max-width: 32.6rem;
-    }
-
-    &__bride2 {
-        z-index: 1;
+        background-color: $bgBeige;
     }
 }

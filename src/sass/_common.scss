@@ -4,12 +4,10 @@
     &-button {
         border: 0;
         border-radius: 3.125rem;
-        color: $white;
         cursor: pointer;
         display: block;
         padding: 1.5rem 2rem;
         text-align: center;
-        text-decoration: none;
         width: 100%;
 
         span {
@@ -20,29 +18,51 @@
         img {
             height: auto;
             vertical-align: text-top;
-            width: 44.5%;
+            width: 47.3%;
         }
+    }
+
+    &-buttonSize__normal {
+        padding: 1.5rem 2rem;
+    }
+
+    &-buttonSize__large {
+        scroll-margin-block: .3rem;
+        padding: 2.2rem;
+    }
+
+    &-buttonShadow {
+        box-shadow: 0px 0px 5px 0px rgba(179, 62, 62, 0.25);
+    }
+
+    &-buttonShadow__strong {
+        box-shadow: 0px 0px 3px 1px rgba(244, 140, 167, .7);
     }
 
     &-bgColor__pink {
         background: $btnBgPinkGrad;
-    }
 
-    &-bgColor__ciGreen {
-        background: $ciGreen;
+        &:hover {
+            background-position: 100% 0;
+        }
     }
 
     &-bgColor__beige {
-        background: $beige;
+        background: $bgBeige;
     }
 
     &-bgColor__white {
-        background: $white;
+        background: $bgWhite;
     }
 
     &-contentWrap {
         margin: 0 auto;
-        max-width: 500px;
+        max-width: 430px;
+
+        @media screen and (min-width: 1200px) {
+            position: relative;
+            box-shadow: 0px 0px 7.6px 0px rgba(0, 0, 0, 0.25);
+        }
     }
 
     &-section__inner {
