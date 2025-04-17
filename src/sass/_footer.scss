@@ -1,0 +1,58 @@
+/* --footer-- */
+
+.footer {
+    position: relative;
+
+    &__inner {
+        padding: 2rem;
+        text-align: center;
+    }
+
+    &__logo {
+        margin-bottom: 2.5rem;
+        text-align: center;
+
+        img {
+            height: 4.6rem;
+            width: auto;
+        }
+    }
+
+    &__menu {
+        display: flex;
+        gap: 2.4rem;
+        justify-content: center;
+        margin-bottom: 2rem;
+    }
+
+    &__menuItem {
+        & a {
+            align-items: center;
+            color: #153496;
+            display: flex;
+            font-size: 1.2rem;
+            line-height: 1.5;
+            padding-block: .5rem;
+            text-decoration: none;
+
+            &::after {
+                background: url(../images/footer_menu-item-arrrow.webp);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: 100% auto;
+                content: "";
+                display: block;
+                height: 1.5rem;
+                margin-left: .5rem;
+                width: 1.5rem;
+            }
+        }
+    }
+
+    &__copyright {
+        color: #707070;
+        font-size: 1.2rem;
+        line-height: 1.5;
+        padding: .8rem;
+    }
+}

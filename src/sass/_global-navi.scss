@@ -1,0 +1,157 @@
+/* --global-navi-- */
+
+.globalNavigation {
+    padding-inline: 1rem;
+
+    &__menu {
+        padding: 1rem 2rem;
+
+        @media screen and (min-width: 500px) {
+            padding: 3.6rem;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+    }
+
+    &__menuItem {
+        &:last-of-type a {
+            border-bottom: 0;
+            margin-bottom: 0;
+        }
+
+        @media screen and (min-width: 500px) {
+            text-align: center;
+        }
+
+        & a {
+            border-bottom: 1px dashed $btnBgPink;
+            display: flex;
+            font-size: 1.4rem;
+            padding: 2rem 0;
+        }
+    }
+
+    /*---icon---*/
+    #drawer__checkbox {
+        display: none;
+    }
+
+    #drawer__icon {
+        cursor: pointer;
+        display: inline-block;
+        height: 2.3rem;
+        margin: 0;
+        position: relative;
+        width: 2.8rem;
+        z-index: 100;
+
+        @media screen and (min-width: 1200px) {
+            display: none;
+        }
+    }
+
+    #drawer__icon span {
+        background-color: $btnBgPink;
+        border-radius: .2rem;
+        display: block;
+        width: 100%;
+        height: .3rem;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        margin: 0 0 0 -34%;
+        transition: all 0.3s ease-in-out 0s;
+    }
+
+    #drawer__icon span::before, #drawer__icon span::after {
+        -webkit-transform: rotate(0);
+        background-color: $btnBgPink;
+        border-radius: .2rem;
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        margin: 0 0 0 -50%;
+        transform: rotate(0);
+        transition: all 0.3s ease-in-out;
+    }
+
+    #drawer__icon span::before {
+        margin-top: -40%;
+    }
+
+    #drawer__icon span::after {
+        margin-top: 30%;
+    }
+
+    /*---クローズアイコン---*/
+    #drawer__checkbox:checked ~ #drawer__icon span {
+        background: rgba(51, 51, 51, 0);
+    }
+
+    #drawer__checkbox:checked ~ #drawer__icon span::before, #drawer__checkbox:checked ~ #drawer__icon span::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: 0 0 0 -42%;
+    }
+
+    #drawer__checkbox:checked ~ #drawer__icon span::before {
+        transform: rotate(-45deg);
+    }
+
+    #drawer__checkbox:checked ~ #drawer__icon span::after {
+        transform: rotate(45deg);
+    }
+
+    /*---アイコンを押してスライドして出るエリア---*/
+    #drawer__content {
+        background: $bgBeige;
+        background-size: 100% auto;
+        height: 100%;
+        letter-spacing: 0.03em;
+        max-width: 100%;
+        overflow: auto;
+        position: fixed;
+        left: 0;
+        top: 6.5rem;
+        transition: all 0.3s ease-in-out 0s;
+        transform: translateX(100%);
+        width: 100%;
+        z-index: 40;
+
+        @media screen and (min-width: 1200px) {
+            display: none;
+        }
+    }
+
+    #drawer__checkbox:checked ~ #drawer__content {
+        transform: translateX(0);
+    }
+
+    /*---クローズ設定---*/
+    #drawer__close {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 39;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: all 0.3s ease-in-out 0s;
+    }
+
+    #drawer__checkbox:checked ~ #drawer__close {
+        display: block;
+        opacity: 0.3;
+    }
+
+}

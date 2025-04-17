@@ -1,0 +1,101 @@
+/* --feature-- */
+
+.feature {
+    &__sectionBackground {
+        background: url(../images/feature_section-background.webp);
+    }
+
+    &__header {
+        margin: 0 auto 10rem;
+        max-width: 33.5rem;
+    }
+
+    &__item {
+        margin-bottom: 25.4rem;
+        position: relative;
+
+        &:first-of-type:before,
+        &:nth-of-type(2):before,
+        &:last-of-type:before {
+            content: "";
+            display: block;
+            position: absolute;
+            z-index: 1;
+        }
+
+        &:first-of-type .feature__itemText {
+            width: 25.4rem
+        }
+
+        &:nth-of-type(2) .feature__itemHeader {
+            text-align: right;
+        }
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+
+    &__itemHeader {
+        color: $ciBrown;
+        font-size: 1.6rem;
+        font-weight: bold;
+        line-height: 1.4;
+        margin-bottom: 1.5rem;
+        position: relative;
+        z-index: 2;
+    }
+
+    &__itemText {
+        position: relative;
+        z-index: 2;
+    }
+
+    &__itemBackground1 {
+        height: 33.1rem;
+        position: absolute;
+        right: -2rem;
+        top: -8.6rem;
+        width: 23.9rem;
+
+        @media screen and (min-width: 500px) {
+            right: -8.3rem;
+        }
+    }
+
+    &__itemBackground2 {
+        height: 31.8rem;
+        position: absolute;
+        left: -2rem;
+        top: -17.2rem;
+        width: 25rem;
+
+        @media screen and (min-width: 500px) {
+            left: -8.3rem;
+        }
+    }
+
+    &__itemBackground3 {
+        height: 32.3rem;
+        position: absolute;
+        right: -2rem;
+        top: -23.2rem;
+        width: 26.9rem;
+
+        @media screen and (min-width: 500px) {
+            right: -8.3rem;
+        }
+    }
+
+    &__ctaArea {
+        background: url(../images/feature_cta-area-background.webp);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        padding: 2rem;
+    }
+
+    &__buttonMicrocopy {
+        margin-bottom: .5rem;
+    }
+}

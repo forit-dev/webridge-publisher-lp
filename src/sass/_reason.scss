@@ -1,0 +1,18 @@
+/* --reason-- */
+
+.reason {
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &__header {
+        margin-bottom: 5rem;
+    }
+
+    &__item {
+        margin-bottom: 7.6rem;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+}
