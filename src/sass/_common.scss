@@ -40,10 +40,14 @@
     }
 
     &-bgColor__pink {
-        background: $btnBgPinkGrad;
+        background: $btnBgPinkGrad 0 0 no-repeat;
+        transition: .3s cubic-bezier(.45,0,.55,1);
+        background-size: 200% 100%;
 
-        &:hover {
-            background-position: 100% 0;
+        @media screen and (min-width: 1024px) {
+            &:hover {
+                background-position: 100% 0;
+            }
         }
     }
 

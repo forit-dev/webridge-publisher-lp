@@ -1,9 +1,15 @@
 /* --works-- */
 
 .works {
-    background: url(../images/works_bg.webp);
+    background: url(../images/works_bg-sm.webp);
     background-repeat: no-repeat;
     background-size: cover;
+
+    @media screen and (min-width: 430px) {
+        background: url(../images/works_bg-lg.webp);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
 
     &__header {
         margin-bottom: 1.2rem;
