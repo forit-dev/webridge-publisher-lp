@@ -49,9 +49,11 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener("scroll", onScroll);
 
     
-    // 特定のURLにアクセスした場合
-    if (window.location.href === 'https://stg-webridge-publisher-lp.netlify.app/') {
-    // 別のURLへリダイレクト
-    window.location.href = 'https://webridge.net/';
-    }
+    document.addEventListener("DOMContentLoaded", () => {
+        // 現在のURLが https://stg-webridge-publisher-lp.netlify.app/ であれば
+        if (window.location.href === 'https://stg-webridge-publisher-lp.netlify.app/') {
+            // https://webridge.net/ へリダイレクト
+            window.location.href = 'https://webridge.net/';
+        }
+    });
 });
