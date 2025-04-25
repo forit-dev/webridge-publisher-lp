@@ -1,9 +1,7 @@
 /* --faq-- */
 
 .faq {
-    background: url(../images/faq_bg-parts.webp), linear-gradient(180deg, #FEEEEF 0%, #FFFFE7 97.41%);
-    background-position: center top, center;
-    background-repeat: no-repeat;
+    background: linear-gradient(180deg, #FEEEEF 0%, #FFFFE7 97.41%);
     background-size: 100% auto;
 
     &__header {

@@ -47,4 +47,11 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     window.addEventListener("scroll", onScroll);
+
+    
+    // 特定のURLにアクセスした場合
+    if (window.location.href === 'https://lp.webridge.net') {
+    // 別のURLへリダイレクト
+    window.location.href = 'https://webridge.net/';
+    }
 });
