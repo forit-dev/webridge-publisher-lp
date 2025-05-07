@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.cdnfonts.com/css/fredoka-one" rel="stylesheet">
+        <title>SSGformテスト</title>
+    </head>
+    
+    <body class="bg-neutrals-100">
+        <main class="pt-20 lg:pt-[152px]">
+        
+            <!-- First view / Hero Section -->
+            <div class="bg-neutrals-100 relative overflow-hidden">
+                <!-- Background Elements -->
+                <div class="absolute inset-0 bg-white opacity-50"></div>
+                <div class="absolute inset-0 bg-[#E7F0FF]"></div>
+                <div class="absolute top-0 left-0 w-full h-full">
+                    <div class="absolute top-0 left-1/4 w-96 h-96 rounded-full bg-[#6B9EDC] opacity-15 blur-[200px]"></div>
+                    <div class="absolute bottom-0 right-1/4 w-96 h-96 rounded-full bg-[#6B9EDC] opacity-10 blur-[200px]"></div>
+                    <div class="absolute top-1/2 left-1/2 w-96 h-96 rounded-full bg-[#6B9EDC] opacity-10 blur-[200px] transform -translate-x-1/2 -translate-y-1/2"></div>
+                </div>
+            </div>
+            
+            <!-- Content Section -->
+            <div class="relative z-10 pt-4 pb-24 w-[91.25%] max-w-[1320px] mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+                    <!-- Left Column - Contact Form -->
+                    <div>
+                        <div class="mb-6">
+                            <h1 class="font-fredoka text-3xl md:text-5xl text-primary mb-4">Contact Us</h1>
+                            <p class="text-lg md:text-xl font-semibold text-neutrals-800 mb-4">
+                                Email or complete the form to learn how we can help you achieve your marketing goals.
+                            </p>
+                            <a href="mailto:hello@for-it-digital.asia" class="text-foritRose text-lg font-semibold hover:underline">
+                                hello@for-it-digital.asia
+                            </a>
+                        </div>
+                        
+                        <!-- Contact Form -->
+                        <div class="bg-tradWhite rounded-customSm shadow-[0px_0px_8px_0px_rgba(0,0,0,0.15)] p-6 md:p-9">
+
+                            <form class="flex flex-col gap-6" action="https://ssgform.com/s/6ZbG8GsQ6H0H" method="post">
+                                <!-- Full Name -->
+                                <div class="flex flex-col gap-1">
+                                    <input 
+                                        type="text"
+                                        name="Full Name"
+                                        placeholder="Full Name" 
+                                        class="w-full px-4 py-3 border border-[#E0E0E0] rounded-lg text-lg focus:outline-none focus:ring-2 focus:ring-foritRose"
+                                        required
+                                    >
+                                </div>
+                                
+                                <!-- Website -->
+                                <div class="flex flex-col gap-1">
+                                    <input 
+                                        type="text"
+                                        name="Website" 
+                                        placeholder="Website" 
+                                        class="w-full px-4 py-3 border border-[#E0E0E0] rounded-lg text-lg focus:outline-none focus:ring-2 focus:ring-foritRose"
+                                    >
+                                </div>
+                                
+                                <!-- Email -->
+                                <div class="flex flex-col gap-1">
+                                    <div class="relative">
+                                        <input 
+                                            type="email"
+                                            name="Your email" 
+                                            placeholder="Your email" 
+                                            class="w-full px-4 py-3 border border-[#E0E0E0] rounded-lg text-lg focus:outline-none focus:ring-2 focus:ring-foritRose"
+                                            required
+                                        >
+                                        <span class="absolute right-4 top-1/2 transform -translate-y-1/2 text-[#CACDD2]">
+                                            <i class="far fa-envelope"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                
+                                <!-- Phone Number -->
+                                <div class="flex flex-col gap-1">
+                                    <input 
+                                        type="tel"
+                                        name="Your phone number" 
+                                        placeholder="Your phone number" 
+                                        class="w-full px-4 py-3 border border-[#E0E0E0] rounded-lg text-lg focus:outline-none focus:ring-2 focus:ring-foritRose"
+                                    >
+                                </div>
+                                
+                                <!-- Subject -->
+                                <div class="flex flex-col gap-1">
+                                    <div class="relative">
+                                        <select 
+                                            class="w-full px-4 py-3 border border-[#E0E0E0] rounded-lg text-lg bg-white appearance-none focus:outline-none focus:ring-2 focus:ring-foritRose text-[#9E9E9E]"
+                                            required
+                                        >
+                                            <option name="Other" value="" selected disabled>Choose a subject</option>
+                                            <option name="Other" value="general">General Inquiry</option>
+                                            <option name="Other" value="services">Services</option>
+                                            <option name="Other" value="partnership">Partnership</option>
+                                            <option name="Other" value="other">Other</option>
+                                        </select>
+                                        <span class="absolute right-4 top-1/2 transform -translate-y-1/2 text-[#4B4B4B]">
+                                            <i class="fas fa-angle-down"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                
+                                <!-- Message -->
+                                <div class="flex flex-col gap-1">
+                                    <textarea 
+                                        name="How can we help?"
+                                        placeholder="How can we help?" 
+                                        class="w-full px-4 py-3 border border-[#E0E0E0] rounded-lg text-lg h-32 resize-none focus:outline-none focus:ring-2 focus:ring-foritRose"
+                                        required
+                                    ></textarea>
+                                </div>
+                                
+                                <!-- Submit Button -->
+                                <button 
+                                    type="submit" 
+                                    class="w-full bg-foritRose text-white font-semibold py-3 px-6 rounded-full hover:bg-opacity-90 transition-all"
+                                >
+                                    Submit
+                                </button>
+                                
+                                <!-- Terms Notice -->
+                                <p class="text-center text-[#73787E] text-sm">
+                                    By contact us, you agree to our <br class="md:hidden">
+                                    <a href="#" class="underline hover:text-foritRose">Terms of services</a> and 
+                                    <a href="#" class="underline hover:text-foritRose">Privacy Policy</a>.
+                                </p>
+                            </form>
+                        </div>
+                    </div>
+                    
+                    <!-- Right Column - Office Info & Map -->
+                    <div class="flex flex-col gap-8">
+                        <!-- Office Information -->
+                        <div>
+                            <h2 class="font-fredoka text-2xl md:text-3xl text-primary mb-4">FORiT Malaysia</h2>
+                            <address class="not-italic text-base md:text-lg text-neutrals-800 leading-relaxed">
+                                B-1-2 Northpoint Office<br>
+                                No.1 Medan Syed Putra Utara,<br>
+                                Mid Valley City<br>
+                                59200<br>
+                                Kuala Lumpur<br>
+                                Malaysia
+                            </address>
+                        </div>
+                        
+                        <!-- Map -->
+                        <div class="rounded-3xl overflow-hidden shadow-[0px_6px_8px_0px_rgba(0,0,0,0.15)] h-[400px] lg:h-[500px]">
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.9396870648397!2d101.67566907576707!3d3.1175312532499854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc49c701efeae7%3A0x571e60691f731e99!2sNorthpoint%20Mid%20Valley%20City!5e0!3m2!1sen!2sjp!4v1714543944010!5m2!1sen!2sjp" 
+                                width="100%" 
+                                height="100%" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+            <div class="bg-neutrals-100 bg-[url('img/cont-end-bg_sp.webp')] md:bg-[url('img/cont-end-bg_pc.webp')] bg-bottom bg-no-repeat bg-[size:100%_auto] h-[17.6vw] md:h-[11.7vw]"></div>
+            
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="js/app.js"></script>
+    </body>
+</html>
