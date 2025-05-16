@@ -1,0 +1,113 @@
+/* --aside-- */
+
+.aside {
+    display: none;
+
+    @media screen and (min-width: 431px) {
+        display: block;
+    }
+
+    @media screen and (min-width: 1200px) {
+        padding-top: 6.6rem;
+    }
+
+    &__inner {
+        background: $bgBeige;
+        height: 100vh;
+        left: 0;
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+
+    &__left, &__right {
+        display: grid;
+        height: 100vh;
+        padding: 4rem;
+        place-content: center;
+        width: calc(50% - 215px);
+        position: absolute;
+    }
+
+    &__left {
+        background: url(../images/aside_background-left.webp);
+        background-position: center;
+        background-size: cover;
+        left: 0;
+        place-items: center;
+        top: 0;
+    }
+
+    &__leftLogo,
+    &__buttonMicrocopy,
+    &__leftButton {
+        display: none;
+
+        @media screen and (min-width: 1200px) {
+            display: block;
+        }
+    }
+
+    &__leftLogo {
+        @media screen and (min-width: 1200px) {
+            height: auto;
+            margin-bottom: 5.5rem;
+            max-width: 32.4rem;
+        }
+    }
+
+    &__buttonMicrocopy {
+        margin-bottom: .5rem;
+        max-width: 41.3rem;
+    }
+
+    &__leftButton {
+        @media screen and (min-width: 1200px) {
+            max-width: 41.3rem;
+
+            & img {
+                height: 1.6rem;
+                width: auto;
+            }
+        }
+    }
+
+    &__right {
+        background: url(../images/aside_background-right.webp);
+        background-position: center;
+        background-size: cover;
+        right: 0;
+        top: 0;
+    }
+
+    &__navigation {
+        display: none;
+
+        @media screen and (min-width: 1200px) {
+            display: block;
+            max-width: 30.5rem;
+        }
+    }
+
+    &__navigationMenuItem {
+        text-align: center;
+
+        &:last-of-type a {
+            border-bottom: 0;
+        }
+
+        & a {
+            align-items: center;
+            border-bottom: 1px dashed $btnBgPink;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 1.2rem;
+            padding: 2rem 0;
+
+            & img {
+                height: 2.2rem;
+                width: auto;
+            }
+        }
+    }
+}

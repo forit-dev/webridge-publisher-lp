@@ -1,0 +1,17 @@
+/* --first view-- */
+
+.firstView {
+    padding-top: 6.5rem;
+
+    @media screen and (min-width: 1200px) {
+        padding-top: 0rem;
+    }
+
+    &__buttonWrap {
+        padding-inline: 2rem;
+    }
+
+    &__inner {
+        background-color: $bgBeige;
+    }
+}

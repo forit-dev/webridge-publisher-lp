@@ -1,0 +1,122 @@
+/* --common-- */
+
+.c {
+    &-button {
+        border: 0;
+        border-radius: 3.125rem;
+        cursor: pointer;
+        display: block;
+        padding: 1.5rem 2rem;
+        text-align: center;
+        width: 100%;
+
+        span {
+            display: inline-block;
+            margin-right: .8rem;
+        }
+
+        img {
+            height: auto;
+            vertical-align: text-top;
+            width: 47.3%;
+        }
+    }
+
+    &-buttonSize__normal {
+        padding: 1.5rem 2rem;
+    }
+
+    &-buttonSize__large {
+        scroll-margin-block: .3rem;
+        padding: 2.2rem;
+    }
+
+    &-buttonShadow {
+        box-shadow: 0px 0px 5px 0px rgba(179, 62, 62, 0.25);
+    }
+
+    &-buttonShadow__strong {
+        box-shadow: 0px 0px 3px 1px rgba(244, 140, 167, .7);
+    }
+
+    &-bgColor__pink {
+        background: $btnBgPinkGrad 0 0 no-repeat;
+        transition: .3s cubic-bezier(.45,0,.55,1);
+        background-size: 200% 100%;
+
+        @media screen and (min-width: 1024px) {
+            &:hover {
+                background-position: 100% 0;
+            }
+        }
+    }
+
+    &-bgColor__beige {
+        background: $bgBeige;
+    }
+
+    &-bgColor__white {
+        background: $bgWhite;
+    }
+
+    &-contentWrap {
+        margin: 0 auto;
+        max-width: 430px;
+
+        @media screen and (min-width: 1200px) {
+            position: relative;
+            box-shadow: 0px 0px 7.6px 0px rgba(0, 0, 0, 0.25);
+        }
+    }
+
+    &-section__inner {
+        padding: 6.4rem 2rem;
+    }
+
+    &-content__maxWidth {
+        margin: 0 auto;
+        max-width: 33.5rem;
+    }
+
+    /* --fadein-- */
+    &-fadein {
+        animation: fadeIn 1.5s ease-in-out 1s forwards;
+    }
+    
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        25% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }    
+
+    /* --fadein scroll-- */
+    &-fadeinScroll {
+        opacity: 0;
+        transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+    }
+    
+    &-fadeinScroll.visible {
+        opacity: 1;
+    }
+    
+    /* --fadein up scroll-- */
+    &-fadeinUpScroll {
+        opacity: 0;
+        transform: translateY(100px);
+        transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+    }
+    
+    &-fadeinUpScroll.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }    
+}
+
+
+
