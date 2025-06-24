@@ -1,0 +1,119 @@
+/* --registrationProcess-- */
+
+.registrationProcess {
+    background-color: #FEFEF6;
+    background-image: url(../images/registration-process_bg.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &__header {
+        margin-bottom: 2rem;
+    }
+
+    &__videoContainer {
+        cursor: pointer; /* ★サムネイルが表示されているときにカーソルをポインターにする */
+        position: relative;
+        width: 100%;
+        padding-bottom: 56.25%; /* 16:9 のアスペクト比 */
+        height: 0;
+        overflow: hidden; /* ★重要：はみ出すコンテンツを隠す */
+        border-radius: 13px; /* 親要素に角丸を適用 */
+    }
+
+    &__videoContainer iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+    }
+
+    /*
+    ========================================
+    カスタムサムネイルバナーのスタイル
+    ========================================
+    */
+    .custom-thumbnail-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent; /* 背景は画像で賄うので透明 */
+        cursor: pointer; /* クリック可能であることを示す */
+        opacity: 1; /* 最初は表示 */
+        transition: opacity 0.3s ease-in-out; /* フェードアニメーション */
+        z-index: 20; /* 動画より手前に表示 */
+        border-radius: 13px; /* 動画コンテナと同じ角丸 */
+        overflow: hidden; /* 画像がはみ出さないように */
+    }
+
+    .custom-thumbnail-overlay.hide {
+        opacity: 0;
+        pointer-events: none; /* 非表示時はクリックイベントを透過 */
+    }
+
+    .custom-thumbnail-overlay img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* 画像がコンテナを覆うように拡大縮小 */
+        display: block;
+    }
+
+    /*
+    ========================================
+    動画終了時のカスタムコンテンツオーバーレイのスタイル (前回と同じ)
+    ========================================
+    */
+    .video-ended-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.85); /* 半透明の黒（動画を隠す） */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 1.2em;
+        text-align: center;
+        opacity: 0; /* 最初は非表示 */
+        transition: opacity 0.3s ease-in-out;
+        pointer-events: none; /* デフォルトではクリックイベントを透過 */
+        z-index: 10; /* サムネイルバナーよりは奥に、動画よりは手前に */
+        border-radius: 13px;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .video-ended-overlay.show {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .video-ended-overlay button,
+    .video-ended-overlay .overlay-link {
+        background-color: #e62117;
+        color: white;
+        border: none;
+        padding: 12px 25px;
+        font-size: 1.1em;
+        cursor: pointer;
+        border-radius: 5px;
+        margin: 8px 0;
+        text-decoration: none;
+        display: inline-block;
+        transition: background-color 0.2s ease;
+    }
+
+    .video-ended-overlay button:hover,
+    .video-ended-overlay .overlay-link:hover {
+        background-color: #c00;
+    }
+}
