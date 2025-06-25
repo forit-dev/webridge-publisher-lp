@@ -6,7 +6,7 @@
   "dependencies": {
     "bootstrap": "^4.5.3",
     "cross-env": "^7.0.2",
-    "css-declaration-sorter": "^4.0.1",
+    "css-declaration-sorter": "^7.2.0",
     "css-mqpacker": "^7.0.0",
     "glob": "^7.1.6",
     "jquery": "^3.5.1",

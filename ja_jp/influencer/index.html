@@ -279,6 +279,25 @@
                     </p>
                 </div>
             </article>
+
+            <!-- registrationProcess -->
+            <article id="registrationProcess" class="registrationProcess c-bgColor__beige">
+                <div class="c-section__inner">
+                    <h2 class="registrationProcess__header">
+                        <img src="assets/images/registration-process_section-header.webp" alt="1分でわかる！Webridge新規登録の流れ" width="335" height="128" loading="lazy">
+                    </h2>
+                    <div class="registrationProcess__videoContainer">
+                        <div id="player"></div>
+
+                        <div class="customThumbnailOverlay" id="thumbnailOverlay">
+                            <img src="assets/images/registration-process_video-thumbnail.webp" alt="Webridge 新規登録方法">
+                        </div>
+
+                        <div class="videoEndedOverlay" id="videoEndedOverlay">
+                        </div>
+                    </div>
+                </div>
+            </article>
                 
             <!-- ctaArea -->
             <div class="ctaArea ctaArea--small ctaArea__bgColorOrange">
@@ -395,6 +414,77 @@
                 <small class="footer__copyright">&copy; For it Inc.</small>
             </div>
         </footer>
+
+        <!-- JavaScript -->
         <script src="assets/js/app.js"></script>
+        <script>
+            // 1. YouTube IFrame Player APIを非同期で読み込む
+            var tag = document.createElement('script');
+            tag.src = "https://www.youtube.com/iframe_api";
+            var firstScriptTag = document.getElementsByTagName('script')[0];
+            firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+            // 2. グローバル変数としてプレーヤーオブジェクト、オーバーレイ要素、サムネイル要素を定義
+            var player;
+            var thumbnailOverlay = document.getElementById('thumbnailOverlay'); // 追加
+            var videoEndedOverlay = document.getElementById('videoEndedOverlay'); // 名前変更
+
+            // 3. APIコードのダウンロードが完了し、プレーヤーオブジェクトを作成する準備ができたときに、この関数が呼び出される
+            function onYouTubeIframeAPIReady() {
+                player = new YT.Player('player', {
+                    videoId: 'PLXvp7wg29A', // ★★★ ここをあなたのYouTube動画IDに置き換えてください ★★★
+                    playerVars: {
+                        'autoplay': 0, // 自動再生はしない（サムネイルクリックで開始）
+                        'controls': 1, // プレーヤーコントロールを表示
+                        'modestbranding': 1,
+                        'rel': 0, // 再生終了後、同じチャンネルの関連動画のみを表示
+                        'showinfo': 0,
+                        'fs': 1, // フルスクリーンボタンを表示
+                        'disablekb': 1 // キーボード操作を無効化（オプション）
+                    },
+                    events: {
+                        'onReady': onPlayerReady,
+                        'onStateChange': onPlayerStateChange
+                    }
+                });
+            }
+
+            // 4. プレーヤーの準備ができたときに呼び出される関数
+            function onPlayerReady(event) {
+                // サムネイルクリックイベントリスナーを設定
+                thumbnailOverlay.addEventListener('click', function() {
+                    playVideoAndHideThumbnail();
+                });
+            }
+
+            // 5. プレーヤーの状態が変化したときに呼び出される関数
+            function onPlayerStateChange(event) {
+                if (event.data == YT.PlayerState.ENDED) {
+                    // 動画が終了したら、動画終了オーバーレイを表示し、サムネイルを再表示
+                    videoEndedOverlay.classList.add('show');
+                    thumbnailOverlay.classList.remove('hide'); // ★サムネイルを再表示
+                    player.stopVideo(); // 再生終了後、動画を完全に停止
+                } else if (event.data == YT.PlayerState.PLAYING || event.data == YT.PlayerState.BUFFERING) {
+                    // 動画が再生中またはバッファリング中は、両方のオーバーレイを非表示
+                    thumbnailOverlay.classList.add('hide'); // ★サムネイルを非表示
+                    videoEndedOverlay.classList.remove('show'); // 動画終了オーバーレイも非表示
+                }
+            }
+
+            // 6. サムネイルクリックで動画を再生し、サムネイルを非表示にする関数
+            function playVideoAndHideThumbnail() {
+                player.playVideo(); // 動画を再生開始
+                thumbnailOverlay.classList.add('hide'); // サムネイルを非表示にする
+                videoEndedOverlay.classList.remove('show'); // 念のため動画終了オーバーレイも非表示
+            }
+
+            // 7. 「もう一度見る」ボタンがクリックされたときに動画を再生する関数
+            function replayVideo() {
+                player.seekTo(0); // 動画を最初（0秒）にシーク
+                player.playVideo(); // 動画を再生
+                videoEndedOverlay.classList.remove('show'); // 動画終了オーバーレイを非表示
+                thumbnailOverlay.classList.add('hide'); // サムネイルは非表示のまま
+            }
+        </script>
     </body>
 </html>
