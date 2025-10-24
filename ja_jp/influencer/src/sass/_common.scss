@@ -15,20 +15,28 @@
             margin-right: .8rem;
         }
 
-        img {
-            height: auto;
-            vertical-align: text-top;
-            width: 47.3%;
-        }
+        
     }
 
     &-buttonSize__normal {
         padding: 1.5rem 2rem;
+
+        img {
+            height: 16px;
+            vertical-align: text-top;
+            width: auto;
+        }
     }
 
     &-buttonSize__large {
         scroll-margin-block: .3rem;
         padding: 2.2rem;
+
+        img {
+            height: auto;
+            vertical-align: text-top;
+            width: 47.3%;
+        }
     }
 
     &-buttonShadow {
@@ -76,6 +84,10 @@
     &-content__maxWidth {
         margin: 0 auto;
         max-width: 33.5rem;
+
+        @media screen and (min-width: 500px) {
+            max-width: 100%;
+        }
     }
 
     /* --fadein-- */
