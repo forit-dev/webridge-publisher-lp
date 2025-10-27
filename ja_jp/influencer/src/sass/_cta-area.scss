@@ -43,7 +43,21 @@
 }
 
 .ctaArea--large { 
-    background: url(../images/cta-area-large_bg.webp);
+    background: url(../images/cta-area-large_bg-sm.webp);
     background-size: cover;
-    padding: 17.4rem 3.2rem  
+    padding: 17.4rem 3.2rem;
+
+    @media screen and (min-width: 500px) {
+        background: url(../images/cta-area-large_bg-lg.webp);
+        background-size: cover;
+        padding: 16rem 3.2rem;
+    }
+
+    .ctaArea__header {
+        text-align: center;
+
+        img {
+            max-width: 31.1rem;
+        }
+    }
 }
