@@ -30,13 +30,7 @@
 
     &-buttonSize__large {
         scroll-margin-block: .3rem;
-        padding: 2.2rem;
-
-        img {
-            height: auto;
-            vertical-align: text-top;
-            width: 47.3%;
-        }
+        padding: 1.3rem 0 1.2rem 0;
     }
 
     &-buttonShadow {
@@ -55,6 +49,17 @@
         @media screen and (min-width: 1024px) {
             &:hover {
                 background-position: 100% 0;
+            }
+        }
+    }
+
+    &-bgColor__simplePink {
+        background: #FC6070;
+        transition: background 0.3s ease;
+
+        @media screen and (min-width: 1024px) {
+            &:hover {
+                background: #FC808D;
             }
         }
     }

@@ -2,16 +2,34 @@
 
 .firstView {
     padding-top: 6.5rem;
+    padding-bottom: 2rem;
 
     @media screen and (min-width: 1200px) {
         padding-top: 0rem;
     }
 
     &__buttonWrap {
+        margin-top: -3.1rem;
+        margin-bottom: 2rem;
         padding-inline: 2rem;
+
+        a {
+            border-radius: 5rem;
+        }
     }
 
     &__inner {
-        background-color: $bgBeige;
+        background-color: $bgWhite;
+    }
+
+    &__trackRecord {
+        margin-bottom: 2rem;
+        margin-inline: auto;
+        max-width: 363px;
+    }
+
+    &__description {
+        margin-inline: auto;
+        max-width: 375px;
     }
 }

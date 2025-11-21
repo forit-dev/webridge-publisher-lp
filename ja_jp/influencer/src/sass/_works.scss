@@ -17,6 +17,11 @@
 
     &__description {
         margin-bottom: 3rem;
+        text-align: center;
+
+        img {
+            max-width: 33.5rem;
+        }
     }
 
     &__decorativeText {
