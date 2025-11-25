@@ -15,7 +15,7 @@
 		display: flex;
         margin: 0 auto;
 		justify-content: space-between;
-        padding: 1.2rem 2rem;
+        padding: .8rem 2rem;
 
         @media screen and (min-width: 1200px) {
             justify-content: center;
@@ -28,8 +28,8 @@
         padding-inline: .7rem;
 
         & img {
-            height: auto;
-            width: 12.1rem;
+            height: 2.7rem;
+            width: auto;
         }
 
         @media screen and (min-width: 1200px) {
@@ -38,6 +38,7 @@
             transform: translateX(0%);
 
             & img {
+                height: auto;
                 width: 13.5rem;
             }
         }
